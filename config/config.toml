@@ -1,0 +1,87 @@
+root_cert = "pki/rootCA.pem"
+queries = "bitvector-queries.toml"
+input_len = 127
+
+[prime]
+radix = 16
+value = "fffffffffffff001"
+
+[generator]
+radix = 16
+value = "47c5c3df2f9d85d"
+
+[[proxy]]
+ip = "localhost"
+port = "8080"
+pubkey = "a92c2f6a560a5f082d9c5f9e13a09ba19eaf53b3ccda621d589629fadd3d476d"
+privkey = "f884e16a4d3cacb43c11d957de870378340c6290786c9c7dbe90b1f2e3f7cf49"
+identity = "pki/proxy1.p12"
+password = "solarwinds123"
+
+[[proxy]]
+ip = "localhost"
+port = "8081"
+pubkey = "b3205fde3285984b8a85685a4c54220875347d17407e247daa49b666dc7d3b0b"
+privkey = "6885bdc376ff0fb3c32892219d8693d3721b86813738f2a913579c6aac39074f"
+identity = "pki/proxy2.p12"
+password = "solarwinds123"
+
+[[aggregator]]
+seed = 3254902190663915549
+ip = "localhost"
+port1 = "8082"
+port2 = "8083"
+pubkey = "7f8b8a36e6d0d3af2f40072919b07fd768facea0b96917e14819abd910379005"
+privkey = "7845e119bf8680e8ae36e98e4307256d9eb7a218be51eb2b372893d457d6595e"
+identity = "pki/server1.p12"
+password = "solarwinds123"
+
+[[aggregator]]
+seed = 3254902190663915549
+ip = "localhost"
+port1 = "8084"
+port2 = "8085"
+pubkey = "6b0bca5aec08b84d66a52c12d959564098096839f84f310cd87a6bac08b40926"
+privkey = "10f49a6c01fc643f445a8586185e17533b362b4f4672d0c85419f387e66f0153"
+identity = "pki/server2.p12"
+password = "solarwinds123"
+
+[[follower]]
+seed = 3254902190663915549
+ip = "localhost"
+port1 = "8086"
+port2 = "8087"
+pubkey = "8eab8dbc649aff2b883d35d1a017005a42875a8d8eaeb19b1ed53e413b39ed4f"
+privkey = "c89d5ec9d5887b9667aae3a1893fe77693d7a8d44cda5c4040b899b6f60a0a43"
+identity = "pki/follower1.p12"
+password = "solarwinds123"
+
+[[follower]]
+seed = 3254902190663915549
+ip = "localhost"
+port1 = "8088"
+port2 = "8089"
+pubkey = "ffdca105f182c33cc074f098fcc144d62d8a3f318c9b3352694c27f46369da57"
+privkey = "d0b5f253df2dd11b9db14fabda4dfeb0309c6125cbcb6b2a3fd39ab7f543544c"
+identity = "pki/follower2.p12"
+password = "solarwinds123"
+
+[[follower]]
+seed = 3254902190663915549
+ip = "localhost"
+port1 = "8090"
+port2 = "8091"
+pubkey = "5eebc16c03ecf28b8d29cbb87b3f30ca7109ff8d60b6af59cc8df60b2546cd77"
+privkey = "f0a8370032feac7a59d26a7154c48bdd6ae54125e8783b436a2d9559511bed62"
+identity = "pki/follower3.p12"
+password = "solarwinds123"
+
+[[follower]]
+seed = 3254902190663915549
+ip = "localhost"
+port1 = "8092"
+port2 = "8093"
+pubkey = "83f6d2450ef1ff1b7640ab609d7207cb6ba299a582f729ea2235a34aa6ee6f60"
+privkey = "d07fc06f4f69d31e57ed5c5aa5769a3de26f08716dda98378d5864eabe910540"
+identity = "pki/follower4.p12"
+password = "solarwinds123"
